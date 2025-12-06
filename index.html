@@ -144,11 +144,15 @@
     }
 
     .hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 3rem;
-      align-items: center;
-    }
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        align-items: center;
+      }
+      
+      /* Optional: keep the text from getting TOO wide on big screens */
+      .hero-layout > div {
+        max-width: 720px;
+      }
 
     .hero-kicker {
       font-size: 0.85rem;
