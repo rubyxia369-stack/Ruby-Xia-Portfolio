@@ -301,7 +301,7 @@
     /* Sections */
 
     section {
-      padding: 2.5rem 0;
+      padding: 2.7rem 0;
     }
 
     section + section {
@@ -904,6 +904,63 @@
         </p>
       </div>
     </section>
+  /* Contact */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+      margin-top: 0.5rem;
+    }
+    
+    .contact-body p {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+    
+    form[aria-label="Contact form"] {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1.25rem 1.3rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(226,232,240,0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    form[aria-label="Contact form"] label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+    
+    form[aria-label="Contact form"] input,
+    form[aria-label="Contact form"] textarea {
+      width: 100%;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.75rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+    
+    form[aria-label="Contact form"] input:focus-visible,
+    form[aria-label="Contact form"] textarea:focus-visible {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-soft);
+      background: #ffffff;
+    }
+    
+    form[aria-label="Contact form"] textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
   <!-- Footer -->
   <footer>
     <div class="container footer-row">
