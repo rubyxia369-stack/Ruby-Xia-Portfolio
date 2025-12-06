@@ -471,54 +471,50 @@
 
     /* Footer */
 
-      footer {
-        border-top: 1px solid var(--border);
-        padding: 1.3rem 0 1.6rem;
-        font-size: 0.8rem;
-        color: var(--muted);
-      }
-      
-      .footer-row,
-      .footer-inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.75rem;
-      }
-      
-      .footer-main {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.4rem;
-      }
-      
-      .footer-main a {
-        color: var(--accent);
-        font-weight: 500;
-      }
-      
-      .footer-dot {
-        opacity: 0.5;
-      }
-      
-      .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        align-items: center;
-      }
-      
-      .footer-links a {
-        color: var(--accent);
-        font-weight: 500;
-      }
-      
-      .footer-note {
-        max-width: 22rem;
-      }
-
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.4rem 0 1.7rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    
+    .footer-row,
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .footer-main,
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .footer-main a,
+    .footer-links a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    
+    .footer-dot {
+      opacity: 0.5;
+    }
+    
+    .footer-accessibility {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
     @media (max-width: 880px) {
       .page-hero-layout,
       .work-card,
@@ -1000,34 +996,35 @@
       </p>
     </div>
   </section>
-
-   <footer>
-    <div class="container footer-inner">
-      <div class="footer-main">
-        <span>© <span id="year"></span> Ziyu Xia</span>
-        <span class="footer-dot">·</span>
-        <a href="index.html#hero">Home</a>
-        <span class="footer-dot">·</span>
-        <a href="#work">Work</a>
-        <span class="footer-dot">·</span>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:rubyxia369@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="Ziyu_Xia_Resume_Primary.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-        <span class="footer-note">
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <div class="footer-main">
+            <span>© <span id="year"></span> Ziyu Xia</span>
+            <span class="footer-dot">·</span>
+            <a href="index.html#hero">Home</a>
+            <span class="footer-dot">·</span>
+            <a href="#work">Work</a>
+            <span class="footer-dot">·</span>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="footer-links">
+            <a href="mailto:rubyxia369@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="Ziyu_Xia_Resume_Primary.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+          </div>
+        </div>
+        <div class="footer-accessibility">
           Accessibility: high-contrast palette, keyboard-navigable links.
-        </span>
+        </div>
       </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    </footer>
+  
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
 
   <script>
     // Filter logic
