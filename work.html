@@ -223,14 +223,15 @@
     }
 
     .case-title {
-      margin: 0 0 0.15rem;
-      font-size: 1.08rem;
+      font-size: 1.25rem;
+      margin: 0 0 0.4rem;
     }
-
+    
     .case-meta-line {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin: 0 0 0.6rem;
+      margin: 0 0 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text-muted);
     }
 
     .case-tags {
@@ -333,10 +334,16 @@
       box-shadow: var(--shadow-soft);
       border: 1px solid var(--border);
     }
-
+    /* softer, text-only meta beside the folder */
+    .docs-meta {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    
     .docs-note {
       font-size: 0.9rem;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     iframe.docs-frame {
@@ -350,20 +357,17 @@
     /* Contact CTA */
 
     .contact-cta {
-      margin-top: 1.4rem;
-      padding: 1rem 1.2rem;
+      margin-top: 2.5rem;        /* more space after docs */
+      padding: 1.1rem 1.3rem;
       border-radius: var(--radius-lg);
-      background: rgba(48,84,229,0.06);
-      border: 1px solid rgba(129,140,248,0.8);
+      background: rgba(48,84,229,0.04);
+      border: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 0.8rem;
       align-items: center;
       font-size: 0.9rem;
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .btn {
@@ -412,49 +416,43 @@
 
     /* Footer (same structure as index) */
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1.4rem 0 1.7rem;
+        footer {
+      border-top: 1px solid rgba(148,163,184,0.4);
+      padding: 1.2rem 0 1.4rem;
       font-size: 0.85rem;
-      color: var(--muted);
+      color: var(--text-muted);
     }
-
+    
     .footer-inner {
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.3rem;
     }
-
-    .footer-top {
+    
+    .footer-main {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      gap: 0.35rem;
       align-items: center;
-      gap: 0.75rem;
     }
-
-    .footer-main,
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.4rem;
+    
+    .footer-main a {
+      text-decoration: none;
+      color: inherit;
     }
-
-    .footer-main a,
-    .footer-links a {
+    
+    .footer-main a:hover {
       color: var(--accent);
-      font-weight: 500;
     }
-
-    .footer-dot {
-      opacity: 0.5;
+    
+    .footer-separator {
+      opacity: 0.7;
     }
-
+    
     .footer-accessibility {
-      font-size: 0.78rem;
-      color: var(--muted);
+      font-size: 0.8rem;
     }
+
 
     /* Responsive */
 
@@ -834,12 +832,12 @@
               title="Google Drive portfolio folder (Ruby Xia)"
             ></iframe>
           </div>
-          <div class="docs-card">
+          <div class="docs-meta">
             <p class="docs-note">
               This folder includes:
             </p>
             <ul class="docs-note" style="padding-left:1.1rem; margin-top:0.25rem;">
-              <li>Portfolio README overview and index.</li>
+                    <li>Portfolio README overview and index.</li>
               <li>Selected AMA strategy slides.</li>
               <li>Run-of-show and post-event notes templates.</li>
               <li>INFO 201 dashboard and presentation excerpts.</li>
@@ -852,7 +850,6 @@
             </p>
           </div>
         </div>
-
         <div class="contact-cta">
           <div>
             <strong>Need more detail on a project?</strong>
@@ -890,24 +887,23 @@
   <!-- Footer -->
   <footer>
     <div class="container footer-inner">
-      <div class="footer-top">
-        <div class="footer-main">
-          <span>© <span id="year"></span> Ziyu Xia</span>
-          <span class="footer-dot">·</span>
-          <a href="index.html#hero">Home</a>
-          <span class="footer-dot">·</span>
-          <a href="#case-studies">Work</a>
-          <span class="footer-dot">·</span>
-          <a href="index.html#contact">Contact</a>
-        </div>
-        <div class="footer-links">
-          <a href="mailto:rubyxia369@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="Ziyu_Xia_Resume_Primary.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-        </div>
+      <div class="footer-main">
+        <span>© <span id="year"></span> Ziyu Xia</span>
+        <span class="footer-separator">·</span>
+        <a href="index.html">Home</a>
+        <span class="footer-separator">·</span>
+        <a href="work.html">Work</a>
+        <span class="footer-separator">·</span>
+        <a href="contact.html#contact">Contact</a>
+        <span class="footer-separator">·</span>
+        <a href="mailto:rubyxia369@gmail.com">Email</a>
+        <span class="footer-separator">·</span>
+        <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="footer-separator">·</span>
+        <a href="Ziyu_Xia_Resume_Primary.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
       </div>
       <div class="footer-accessibility">
-        Accessibility: high-contrast palette, keyboard-navigable links.
+        Accessibility: alt text for key visuals, high-contrast palette, keyboard-navigable links.
       </div>
     </div>
   </footer>
