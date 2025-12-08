@@ -773,37 +773,6 @@
     </div>
   </footer>
     <script>
-      // Year in footer
-      document.getElementById('year').textContent = new Date().getFullYear();
-    
-      // Fake contact-form feedback (front-end only)
-      const form = document.querySelector('form[aria-label="Contact form"]');
-      if (form) {
-        const button = form.querySelector('button[type="submit"]');
-        const originalText = button.textContent;
-    
-        form.addEventListener('submit', (event) => {
-          event.preventDefault(); // stop real submit for now
-    
-          button.disabled = true;
-          button.textContent = 'Sending...';
-          button.style.background = '#d1d5db';
-    
-          setTimeout(() => {
-            button.textContent = 'Message sent ✓';
-            button.style.background = '#4ade80';
-    
-            setTimeout(() => {
-              button.disabled = false;
-              button.textContent = originalText;
-              button.style.background = '';
-              form.reset();
-            }, 2500);
-          }, 1200);
-        });
-      }
-    </script>
-    <script>
       // In-page AJAX submit to Formspree
       const form = document.getElementById('contact-form');
       const statusEl = document.getElementById('contact-status');
